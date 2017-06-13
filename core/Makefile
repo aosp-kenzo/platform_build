@@ -1938,7 +1938,7 @@ name := $(TARGET_PRODUCT)
 ifeq ($(TARGET_BUILD_TYPE),debug)
   name := $(name)_debug
 endif
-name := $(name)-n-mr2-$(shell date +%Y%m%d)-doveki
+name := aosp-n-mr2-$(shell date +%Y%m%d)-$(TARGET_DEVICE)-$(shell users)
 
 INTERNAL_OTA_PACKAGE_TARGET := $(PRODUCT_OUT)/$(name).zip
 
