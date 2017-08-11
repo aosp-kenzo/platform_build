@@ -39,7 +39,7 @@ PRODUCT_PACKAGES += \
 
 # Additional settings used in all AOSP builds
 PRODUCT_PROPERTY_OVERRIDES := \
-    ro.config.ringtone=Titania.ogg \
+    ro.config.ringtone=Atria.ogg \
     ro.config.notification_sound=Tethys.ogg
 
 # Put en_US first in the list, so make it default.
