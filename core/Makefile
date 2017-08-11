@@ -1938,7 +1938,13 @@ name := $(TARGET_PRODUCT)
 ifeq ($(TARGET_BUILD_TYPE),debug)
   name := $(name)_debug
 endif
-name := aosp-7.1.2-$(TARGET_DEVICE)-$(shell date +%Y%m%d)-$(shell users)
+name := aosp_$(TARGET_DEVICE)-$(shell date +%Y%m%d)-$(shell users)
+ifeq ($(WITH_GAPPS),true)
+name := google_$(TARGET_DEVICE)-$(shell date +%Y%m%d)-$(shell users)
+endif
+ifeq ($(WITH_PIXEL),true)
+name := pixel_$(TARGET_DEVICE)-$(shell date +%Y%m%d)-$(shell users)
+endif
 
 INTERNAL_OTA_PACKAGE_TARGET := $(PRODUCT_OUT)/$(name).zip
 
